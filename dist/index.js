@@ -54,6 +54,8 @@ const user = {
 let cid = 1;
 // let customerId = <number>cid
 let customerId = cid;
+// Errors because customerId is defined as a number.
+// customerId = true
 // Functions
 function addNum(x, y) {
     return x + y;
@@ -62,13 +64,30 @@ function addNum(x, y) {
 function log(message) {
     console.log(message);
 }
+// Should be able to pass in a number or string but not a boolean.
 log('Hey Brad.');
+log('\n');
+log(25);
+log('\n');
+log(27);
 const user1 = {
     id: 1,
     name: 'John',
 };
+log("\nUser1: " + user1);
+console.log("\nUser1.b: " + user1);
+console.log("\nUser1.id: " + user1.id);
+console.log("\nUser1.name: " + user1.name);
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
+const p1 = 1;
+const p2 = 'Hey now';
+const p4 = {
+    id: '77',
+    name: 'Ricky'
+};
+console.log("\np4.id: " + p4.id);
+console.log("\np4.name: " + p4.name);
 // Classes
 class Person {
     constructor(id, name) {
@@ -77,11 +96,12 @@ class Person {
         this.name = name;
     }
     register() {
-        return `${this.name} is now registered`;
+        return `${this.name} is now registered.`;
     }
 }
 const brad = new Person(1, 'Brad Traversy');
 const mike = new Person(2, 'Michael Jordan');
+console.log(brad.register());
 console.log('\n');
 console.log(brad);
 console.log('\n');

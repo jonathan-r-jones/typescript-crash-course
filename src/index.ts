@@ -67,6 +67,9 @@ let cid: any = 1
 // let customerId = <number>cid
 let customerId = cid as number
 
+// Errors because customerId is defined as a number.
+// customerId = true
+
 // Functions
 function addNum(x: number, y: number): number {
   return x + y
@@ -77,10 +80,19 @@ function log(message: string | number): void {
   console.log(message)
 }
 
+// Should be able to pass in a number or string but not a boolean.
 log('Hey Brad.')
+log('\n')
+log(25)
+log('\n')
+log(27)
+
+// Should show an error. 
+// log(true)
 
 // ? means optional parameter.
-// Interfaces
+// Interfaces.  Just like type but with no equals sign.
+// Can't use unions? No sure.
 interface UserInterface {
   readonly id: number
   name: string
@@ -91,6 +103,11 @@ const user1: UserInterface = {
   id: 1,
   name: 'John',
 }
+
+log("\nUser1: " + user1)
+console.log("\nUser1.b: " + user1)
+console.log("\nUser1.id: " + user1.id)
+console.log("\nUser1.name: " + user1.name)
 
 interface MathFunc {
   (x: number, y: number): number
@@ -105,6 +122,23 @@ interface PersonInterface {
   register(): string
 }
 
+type Point = number | string
+const p1: Point = 1
+const p2: Point = 'Hey now'
+
+interface PointInterface {
+  id: number | string,
+  name: string
+}
+
+const p4: PointInterface = {
+  id: '77',
+  name: 'Ricky'
+}
+
+console.log("\np4.id: " + p4.id)
+console.log("\np4.name: " + p4.name)
+
 // Classes
 class Person implements PersonInterface {
   id: number
@@ -117,12 +151,13 @@ class Person implements PersonInterface {
   }
 
   register() {
-    return `${this.name} is now registered`
+    return `${this.name} is now registered.`
   }
 }
 
 const brad = new Person(1, 'Brad Traversy')
 const mike = new Person(2, 'Michael Jordan')
+console.log(brad.register())
 
 console.log('\n')
 console.log(brad)
