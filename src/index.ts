@@ -186,6 +186,8 @@ function getArray<T>(items: T[]): T[] {
 let numArray = getArray<number>([1, 2, 3, 4])
 let strArray = getArray<string>(['Brad', 'John', 'Jill'])
 
-//strArray.push(1) // Throws error
+ // Throws error
+//numArray.push("hello")
+//strArray.push(1)
 
 console.log('ID: ', id)

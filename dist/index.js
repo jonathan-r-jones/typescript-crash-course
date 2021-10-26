@@ -122,5 +122,7 @@ function getArray(items) {
 }
 let numArray = getArray([1, 2, 3, 4]);
 let strArray = getArray(['Brad', 'John', 'Jill']);
-//strArray.push(1) // Throws error
+// Throws error
+//numArray.push("hello")
+//strArray.push(1)
 console.log('ID: ', id);
