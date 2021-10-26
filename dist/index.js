@@ -5,6 +5,11 @@ let company = 'Traversy Media';
 let isPublished = true;
 let x = 'Hello';
 let ids = [1, 2, 3, 4, 5];
+//qq
+ids.push(6, 7);
+ids.push(8, 9);
+ids.push(10, 11);
+console.log('IDS: ', ids);
 let arr = [1, true, 'Hello'];
 // Tuple
 let person = [1, 'Brad', true];

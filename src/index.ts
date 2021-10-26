@@ -5,6 +5,12 @@ let isPublished: boolean = true
 let x: any = 'Hello'
 
 let ids: number[] = [1, 2, 3, 4, 5]
+//qq
+ids.push(6, 7)
+ids.push(8, 9)
+ids.push(10, 11)
+console.log('IDS: ', ids)
+
 let arr: any[] = [1, true, 'Hello']
 
 // Tuple
