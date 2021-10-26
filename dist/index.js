@@ -113,7 +113,9 @@ class Employee extends Person {
         this.position = position;
     }
 }
+// Shawn is registered because the employee class was extended.
 const emp = new Employee(3, 'Shawn', 'Developer');
+console.log(emp.register());
 // Generics
 function getArray(items) {
     return new Array().concat(items);

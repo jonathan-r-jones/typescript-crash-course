@@ -174,7 +174,9 @@ class Employee extends Person {
   }
 }
 
+// Shawn is registered because the employee class was extended.
 const emp = new Employee(3, 'Shawn', 'Developer')
+console.log(emp.register())
 
 // Generics
 function getArray<T>(items: T[]): T[] {
