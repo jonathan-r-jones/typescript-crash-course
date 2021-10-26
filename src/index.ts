@@ -9,6 +9,10 @@ let ids: number[] = [1, 2, 3, 4, 5]
 ids.push(6, 7)
 ids.push(8, 9)
 ids.push(10, 11)
+ids.push(12, 13)
+ids.push(14, 15)
+ids.push(16, 17)
+ids.push(18, 19)
 console.log('IDS: ', ids)
 
 let arr: any[] = [1, true, 'Hello']
@@ -26,7 +30,10 @@ employee = [
 
 // Union
 let pid: string | number
+pid = 22
 pid = '22'
+pid = '23'
+pid = '24'
 
 // Enum
 enum Direction1 {
@@ -54,7 +61,8 @@ const user: User = {
   name: 'John',
 }
 
-// Type Assertion
+// Type Assertion is explicitly telling the compiler that we want to treat an
+// entity as a different type.
 let cid: any = 1
 // let customerId = <number>cid
 let customerId = cid as number
@@ -69,6 +77,9 @@ function log(message: string | number): void {
   console.log(message)
 }
 
+log('Hey Brad.')
+
+// ? means optional parameter.
 // Interfaces
 interface UserInterface {
   readonly id: number
@@ -100,6 +111,7 @@ class Person implements PersonInterface {
   name: string
 
   constructor(id: number, name: string) {
+    console.log('Constructor entered.')
     this.id = id
     this.name = name
   }
@@ -110,7 +122,12 @@ class Person implements PersonInterface {
 }
 
 const brad = new Person(1, 'Brad Traversy')
-const mike = new Person(2, 'Mike Jordan')
+const mike = new Person(2, 'Michael Jordan')
+
+console.log('\n')
+console.log(brad)
+console.log('\n')
+console.log(mike)
 
 // Subclasses
 class Employee extends Person {
@@ -130,7 +147,7 @@ function getArray<T>(items: T[]): T[] {
 }
 
 let numArray = getArray<number>([1, 2, 3, 4])
-let strArray = getArray<string>(['brad', 'John', 'Jill'])
+let strArray = getArray<string>(['Brad', 'John', 'Jill'])
 
 //strArray.push(1) // Throws error
 

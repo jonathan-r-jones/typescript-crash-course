@@ -9,6 +9,10 @@ let ids = [1, 2, 3, 4, 5];
 ids.push(6, 7);
 ids.push(8, 9);
 ids.push(10, 11);
+ids.push(12, 13);
+ids.push(14, 15);
+ids.push(16, 17);
+ids.push(18, 19);
 console.log('IDS: ', ids);
 let arr = [1, true, 'Hello'];
 // Tuple
@@ -22,7 +26,10 @@ employee = [
 ];
 // Union
 let pid;
+pid = 22;
 pid = '22';
+pid = '23';
+pid = '24';
 // Enum
 var Direction1;
 (function (Direction1) {
@@ -42,7 +49,8 @@ const user = {
     id: 1,
     name: 'John',
 };
-// Type Assertion
+// Type Assertion is explicitly telling the compiler that we want to treat an
+// entity as a different type.
 let cid = 1;
 // let customerId = <number>cid
 let customerId = cid;
@@ -54,6 +62,7 @@ function addNum(x, y) {
 function log(message) {
     console.log(message);
 }
+log('Hey Brad.');
 const user1 = {
     id: 1,
     name: 'John',
@@ -63,6 +72,7 @@ const sub = (x, y) => x - y;
 // Classes
 class Person {
     constructor(id, name) {
+        console.log('Constructor entered.');
         this.id = id;
         this.name = name;
     }
@@ -71,7 +81,11 @@ class Person {
     }
 }
 const brad = new Person(1, 'Brad Traversy');
-const mike = new Person(2, 'Mike Jordan');
+const mike = new Person(2, 'Michael Jordan');
+console.log('\n');
+console.log(brad);
+console.log('\n');
+console.log(mike);
 // Subclasses
 class Employee extends Person {
     constructor(id, name, position) {
@@ -85,6 +99,6 @@ function getArray(items) {
     return new Array().concat(items);
 }
 let numArray = getArray([1, 2, 3, 4]);
-let strArray = getArray(['brad', 'John', 'Jill']);
+let strArray = getArray(['Brad', 'John', 'Jill']);
 //strArray.push(1) // Throws error
 console.log('ID: ', id);
