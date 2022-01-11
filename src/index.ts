@@ -17,6 +17,9 @@ console.log('IDS: ', ids)
 
 let arr: any[] = [1, true, 'Hello']
 
+//qq
+console.log("Hello world 412 from TypeScript.");
+
 // Tuple
 let person: [number, string, boolean] = [1, 'Brad', true]
 // Tuple Array

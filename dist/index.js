@@ -15,6 +15,8 @@ ids.push(16, 17);
 ids.push(18, 19);
 console.log('IDS: ', ids);
 let arr = [1, true, 'Hello'];
+//qq
+console.log("Hello world 412 from TypeScript.");
 // Tuple
 let person = [1, 'Brad', true];
 // Tuple Array

@@ -25,8 +25,12 @@ ids.push(8, 9);
 ids.push(10, 11);
 ids.push(12, 13);
 ids.push(14, 15);
+ids.push(16, 17);
+ids.push(18, 19);
 console.log('IDS: ', ids);
 var arr = [1, true, 'Hello'];
+//qq
+console.log("Hello world 3 from TypeScript.");
 // Tuple
 var person = [1, 'Brad', true];
 // Tuple Array
@@ -61,10 +65,13 @@ var user = {
     id: 1,
     name: 'John'
 };
-// Type Assertion
+// Type Assertion is explicitly telling the compiler that we want to treat an
+// entity as a different type.
 var cid = 1;
 // let customerId = <number>cid
 var customerId = cid;
+// Errors because customerId is defined as a number.
+// customerId = true
 // Functions
 function addNum(x, y) {
     return x + y;
@@ -73,25 +80,49 @@ function addNum(x, y) {
 function log(message) {
     console.log(message);
 }
+// Should be able to pass in a number or string but not a boolean.
+log('Hey Brad.');
+log('\n');
+log(25);
+log('\n');
+log(27);
 var user1 = {
     id: 1,
     name: 'John'
 };
+log("\nUser1: " + user1);
+console.log("\nUser1.b: " + user1);
+console.log("\nUser1.id: " + user1.id);
+console.log("\nUser1.name: " + user1.name);
 var add = function (x, y) { return x + y; };
 var sub = function (x, y) { return x - y; };
+var p1 = 1;
+var p2 = 'Hey now';
+var p4 = {
+    id: '77',
+    name: 'Ricky'
+};
+console.log("\np4.id: " + p4.id);
+console.log("\np4.name: " + p4.name);
 // Classes
 var Person = /** @class */ (function () {
     function Person(id, name) {
+        console.log('Constructor entered.');
         this.id = id;
         this.name = name;
     }
     Person.prototype.register = function () {
-        return this.name + " is now registered";
+        return this.name + " is now registered.";
     };
     return Person;
 }());
 var brad = new Person(1, 'Brad Traversy');
-var mike = new Person(2, 'Mike Jordan');
+var mike = new Person(2, 'Michael Jordan');
+console.log(brad.register());
+console.log('\n');
+console.log(brad);
+console.log('\n');
+console.log(mike);
 // Subclasses
 var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
@@ -102,12 +133,16 @@ var Employee = /** @class */ (function (_super) {
     }
     return Employee;
 }(Person));
+// Shawn is registered because the employee class was extended.
 var emp = new Employee(3, 'Shawn', 'Developer');
+console.log(emp.register());
 // Generics
 function getArray(items) {
     return new Array().concat(items);
 }
 var numArray = getArray([1, 2, 3, 4]);
-var strArray = getArray(['brad', 'John', 'Jill']);
-//strArray.push(1) // Throws error
+var strArray = getArray(['Brad', 'John', 'Jill']);
+// Throws error
+//numArray.push("hello")
+//strArray.push(1)
 console.log('ID: ', id);
